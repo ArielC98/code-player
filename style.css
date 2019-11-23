@@ -18,11 +18,19 @@ li:hover{
   cursor: pointer;
 }
 
+.selectedItem{
+  background-color: rgb(8, 205, 98);
+}
+
+.unselectedItem{
+  background-color: white;
+}
+
 li{
   list-style-type: none;
   float: left;
   display: inline-block;
-  margin: 15px 10px 0px 10px;
+  margin: 1.5% 10px;
   font-size: 1.5em;
   background-color: white;
   position: relative;
@@ -31,6 +39,8 @@ li{
   border-radius: 10px;
   padding: 0.5px;
 }
+
+
 
 #runButton{
   float: right;
