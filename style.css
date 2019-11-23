@@ -18,12 +18,16 @@ li:hover{
   cursor: pointer;
 }
 
-.selectedItem{
+.selectedItem#htmlPanel{
   background-color: rgb(8, 205, 98);
 }
 
-.unselectedItem{
-  background-color: white;
+.selectedItem#cssPanel{
+  background-color: rgba(245, 0, 235, 0.53);
+}
+
+.selectedItem#javascriptPanel{
+  background-color: rgba(255, 168, 0, 0.98);
 }
 
 li{
@@ -76,28 +80,35 @@ li{
   margin-top: 10px;
   background-color:white;
   border:1px black solid;
+  outline-style: solid;
+  outline-width: 3px;
+  outline-offset: -3px;
 
 }
 
 textarea{
-  width:99.25%;
+  width:99.10%;
   height: 99.2%;
   background-color: inherit;
   resize: none;
+  font-size: 130%;
 }
 
 #html{
   float: left;
+  outline-color: rgb(8, 205, 98);
 }
 
 #css{
   display: none;
   float: left;
+  outline-color: rgba(245, 0, 235, 0.53);
 }
 
 #javascript{
   display: none;
   float: left;
+  outline-color: rgba(255, 168, 0, 0.98);
 }
 
 #output{
