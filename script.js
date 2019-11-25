@@ -26,6 +26,7 @@ $("#runButton").mouseup(function () {
   $(this).css("background-color","white");
 });
 
+//function to enable the TAB key
 var textareas = document.getElementsByTagName('textarea');
 var count = textareas.length;
 for(var i=0;i<count;i++){
@@ -38,3 +39,12 @@ for(var i=0;i<count;i++){
         }
     }
 }
+
+//Changing iframe content
+$("#runButton").click(function(){
+  $("iframe").contents().find("html").html($("#html textarea").val());
+  $("iframe").contents().find("html").find("head").append("<style type='text/css'></style>");
+  $("iframe").contents().find("html").find("head").find("style").append($("#css textarea").val());
+  document.getElementById('output').children[0].contentWindow.eval($("#javascript textarea").val());
+
+});
